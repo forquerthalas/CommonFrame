@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lost.temple.commonframe.ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.lost.temple.commonframe.widget.QQNaviView
+            android:id="@+id/menu_message"
+            style="@style/style_menu_main"
+            android:onClick="onClick"
+            app:bigIconSrc="@mipmap/bubble_big"
+            app:iconHeight="50dp"
+            app:iconWidth="50dp"
+            app:range="1.2"
+            app:smallIconSrc="@mipmap/bubble_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息" />
+        </com.lost.temple.commonframe.widget.QQNaviView>
+
+        <com.lost.temple.commonframe.widget.QQNaviView
+            android:id="@+id/menu_contacts"
+            style="@style/style_menu_main"
+            android:onClick="onClick"
+            app:bigIconSrc="@mipmap/pre_person_big"
+            app:iconHeight="50dp"
+            app:iconWidth="50dp"
+            app:range="1.2"
+            app:smallIconSrc="@mipmap/pre_person_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人" />
+        </com.lost.temple.commonframe.widget.QQNaviView>
+
+        <com.lost.temple.commonframe.widget.QQNaviView
+            android:id="@+id/menu_mine"
+            style="@style/style_menu_main"
+            android:onClick="onClick"
+            app:bigIconSrc="@mipmap/pre_star_big"
+            app:iconHeight="50dp"
+            app:iconWidth="50dp"
+            app:range="1.2"
+            app:smallIconSrc="@mipmap/pre_star_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人中心" />
+        </com.lost.temple.commonframe.widget.QQNaviView>
+
+    </LinearLayout>
+
+</LinearLayout>
